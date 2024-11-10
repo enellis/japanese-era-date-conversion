@@ -14765,7 +14765,7 @@ export const eraInfo: Record<string, EraInfo> = {
     reading: 'めいとく',
     yomi: 'Meitoku',
     start: '康応2年3月26日',
-    end: '元中9年/明徳3年閏10月5日',
+    end: '明徳5年7月5日',
     years: {
       '1': {
         '1': [1390, 1, 25],

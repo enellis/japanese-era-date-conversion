@@ -85,6 +85,8 @@ async function getDataForEra(era: string): Promise<EraInfo> {
     正慶: { start: '元徳3年8月9日', end: '正慶2年5月22日' },
     建武: { start: '正慶2年5月22日', end: '建武5年8月28日' },
     //
+    明徳: { start: '康応2年3月26日', end: '明徳5年7月5日' },
+    //
     正保: { start: '寛永21年12月16日', end: '正保5年2月15日' },
     //
     明治: { start: '慶応4年9月8日', end: '明治5年12月2日' },
