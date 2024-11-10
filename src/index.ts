@@ -9,7 +9,10 @@ import { yearMap } from './year-map';
 
 const OUTPUT_DIR = 'output/';
 
-const FILE_HEADER = `type MonthDates = Record<number, Array<number>>;
+const FILE_HEADER = `// This file was generated using the Japanese Era Date Conversion Tool.
+// https://github.com/enellis/japanese-era-date-conversion
+
+type MonthDates = Record<number, Array<number>>;
 
 type EraInfo = {
   reading: string;
