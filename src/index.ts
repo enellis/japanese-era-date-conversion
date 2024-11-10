@@ -87,8 +87,8 @@ async function getDataForEra(era: string): Promise<EraInfo> {
     明治: { start: '慶応4年9月8日', end: '明治5年12月2日' },
   };
 
-  const start = eStart?.text.split('（')[0] || specialEraDates[era]?.start;
-  const end = eEnd?.text.split('（')[0] || specialEraDates[era]?.end;
+  const start = specialEraDates[era]?.start || eStart?.text.split('（')[0];
+  const end = specialEraDates[era]?.end || eEnd?.text.split('（')[0];
 
   if (start === undefined) {
     console.error(era + ': Start date not found!');
