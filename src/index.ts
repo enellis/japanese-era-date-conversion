@@ -12,26 +12,30 @@ const OUTPUT_DIR = 'output/';
 const FILE_HEADER = `// This file was generated using the Japanese Era Date Conversion Tool.
 // https://github.com/enellis/japanese-era-date-conversion
 
-type MonthDates = Record<number, Array<number>>;
+type DateArray = [year: number, month: number, day: number];
+
+type Months = Record<number, DateArray>;
 
 type EraInfo = {
   reading: string;
   yomi: string;
   start: string;
   end: string;
-  years: Record<number, MonthDates>;
-};
+  years: Record<number, Months>;
+}
 
 export const eraInfo: Record<string, EraInfo> = `;
 
-type MonthDates = Record<number, Array<number>>;
+type DateArray = [year: number, month: number, day: number];
+
+type Months = Record<number, DateArray>;
 
 type EraInfo = {
   reading: string;
   yomi: string;
   start: string;
   end: string;
-  years: Record<number, MonthDates>;
+  years: Record<number, Months>;
 };
 
 (async () => {
@@ -124,15 +128,16 @@ async function getDataForEra(era: string): Promise<EraInfo> {
       return {} as EraInfo;
     }
 
-    let currentHeadings: Array<string> = [];
-    const yearData: Record<string, MonthDates> = {};
+    let currentHeadings: Array<number> = [];
+    const yearData: Record<number, Months> = {};
 
     for (const eRow of eAliasRows) {
       const headings = eRow
         .querySelectorAll('th')
         .map((e) =>
           e.text.replace('元', '1').replace(/(※|¶|年|歳|月|閏|\n)/g, '')
-        );
+        )
+        .map((e) => parseInt(e));
 
       if (headings.length) {
         currentHeadings = headings;
@@ -175,10 +180,10 @@ async function getDataForEra(era: string): Promise<EraInfo> {
 
   let currentHeadings: number[] = [];
 
-  const gregorianData: Record<string, MonthDates> = {};
-  const julianData: Record<string, MonthDates> = {};
+  const gregorianData: Record<number, Months> = {};
+  const julianData: Record<number, Months> = {};
 
-  const years: Record<string, MonthDates> = {};
+  const years: Record<number, Months> = {};
 
   for (const eRow of eRows) {
     const headings = eRow.querySelectorAll('th').map((e) => {
@@ -214,8 +219,8 @@ async function getDataForEra(era: string): Promise<EraInfo> {
       .querySelectorAll('td')
       .map((e) => e.text.replace('\n', '').split('–')[0].split('/'));
 
-    const gregorianDates: MonthDates = {};
-    const julianDates: MonthDates = {};
+    const gregorianDates: Months = {};
+    const julianDates: Months = {};
 
     let year = 0;
     let month = 0;

@@ -1,14 +1,16 @@
 // This file was generated using the Japanese Era Date Conversion Tool.
 // https://github.com/enellis/japanese-era-date-conversion
 
-type MonthDates = Record<number, Array<number>>;
+type DateArray = [year: number, month: number, day: number];
+
+type Months = Record<number, DateArray>;
 
 type EraInfo = {
   reading: string;
   yomi: string;
   start: string;
   end: string;
-  years: Record<number, MonthDates>;
+  years: Record<number, Months>;
 };
 
 export const eraInfo: Record<string, EraInfo> = {
