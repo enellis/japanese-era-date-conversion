@@ -2,6 +2,7 @@ import fs from 'fs-extra';
 import fetch from 'node-fetch';
 import { parse } from 'node-html-parser';
 
+import { eraDateStringToGregorianDateArray } from './dates';
 import { eraInfo } from './era-info';
 import { gengous } from './gengous';
 import { parseNumber } from './numbers';
@@ -19,22 +20,22 @@ type Months = Record<number, DateArray>;
 type EraInfo = {
   reading: string;
   yomi: string;
-  start: string;
-  end: string;
+  start: DateArray;
+  end: DateArray;
   years: Record<number, Months>;
-}
+};
 
 export const eraInfo: Record<string, EraInfo> = `;
 
-type DateArray = [year: number, month: number, day: number];
+export type DateArray = [year: number, month: number, day: number];
 
 type Months = Record<number, DateArray>;
 
 type EraInfo = {
   reading: string;
   yomi: string;
-  start: string;
-  end: string;
+  start: DateArray;
+  end: DateArray;
   years: Record<number, Months>;
 };
 
@@ -89,27 +90,45 @@ async function getDataForEra(era: string): Promise<EraInfo> {
     正慶: { start: '元徳3年8月9日', end: '正慶2年5月22日' },
     建武: { start: '正慶2年5月22日', end: '建武5年8月28日' },
     //
+    文中: { start: '建徳3年4月1日', end: '文中4年5月27日' },
+    //
     明徳: { start: '康応2年3月26日', end: '明徳5年7月5日' },
     //
+    寛永: { start: '元和10年2月30日', end: '寛永21年12月16日' },
     正保: { start: '寛永21年12月16日', end: '正保5年2月15日' },
+    //
+    承応: { start: '慶安5年9月18日', end: '承応4年4月13日' },
     //
     明治: { start: '慶応4年9月8日', end: '明治5年12月2日' },
   };
 
-  const start = specialEraDates[era]?.start || eStart?.text.split('（')[0];
-  const end = specialEraDates[era]?.end || eEnd?.text.split('（')[0];
+  const startString =
+    specialEraDates[era]?.start || eStart?.text.split('（')[0];
+  const endString = specialEraDates[era]?.end || eEnd?.text.split('（')[0];
 
-  if (start === undefined) {
+  if (startString === undefined) {
     console.error(era + ': Start date not found!');
     return {} as EraInfo;
   }
-  if (end === undefined) {
+  if (endString === undefined) {
     console.error(era + ': End date not found!');
     return {} as EraInfo;
   }
 
-  newEraInfo.start = start;
-  newEraInfo.end = end;
+  const startDateArray = eraDateStringToGregorianDateArray(startString);
+  const endDateArray = eraDateStringToGregorianDateArray(endString);
+
+  if (!startDateArray) {
+    console.error(era + ': Could not convert era date string: ' + startString);
+    return newEraInfo;
+  }
+  if (!endDateArray) {
+    console.error(era + ': Could not convert era date string: ' + endString);
+    return newEraInfo;
+  }
+
+  newEraInfo.start = startDateArray;
+  newEraInfo.end = endDateArray;
 
   const erasWithAliasTable = ['延元', '興国', '正平'];
   if (erasWithAliasTable.includes(era)) {

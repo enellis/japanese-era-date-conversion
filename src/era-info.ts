@@ -8,8 +8,8 @@ type Months = Record<number, DateArray>;
 type EraInfo = {
   reading: string;
   yomi: string;
-  start: string;
-  end: string;
+  start: DateArray;
+  end: DateArray;
   years: Record<number, Months>;
 };
 
@@ -17,8 +17,8 @@ export const eraInfo: Record<string, EraInfo> = {
   大宝: {
     reading: 'たいほう',
     yomi: 'Taihō',
-    start: '大宝1年3月21日',
-    end: '大宝4年5月10日',
+    start: [701, 5, 7],
+    end: [704, 6, 20],
     years: {
       '1': {
         '1': [701, 2, 17],
@@ -82,8 +82,8 @@ export const eraInfo: Record<string, EraInfo> = {
   慶雲: {
     reading: 'けいうん',
     yomi: 'Keiun',
-    start: '大宝4年5月10日',
-    end: '慶雲5年1月11日',
+    start: [704, 6, 20],
+    end: [708, 2, 11],
     years: {
       '1': {
         '1': [704, 2, 14],
@@ -162,8 +162,8 @@ export const eraInfo: Record<string, EraInfo> = {
   和銅: {
     reading: 'わどう',
     yomi: 'Wadō',
-    start: '慶雲5年1月11日',
-    end: '和銅8年9月2日',
+    start: [708, 2, 11],
+    end: [715, 10, 7],
     years: {
       '1': {
         '1': [708, 2, 1],
@@ -285,8 +285,8 @@ export const eraInfo: Record<string, EraInfo> = {
   霊亀: {
     reading: 'れいき',
     yomi: 'Reiki',
-    start: '和銅8年9月2日',
-    end: '霊亀3年11月17日',
+    start: [715, 10, 7],
+    end: [717, 12, 28],
     years: {
       '1': {
         '1': [715, 2, 13],
@@ -336,8 +336,8 @@ export const eraInfo: Record<string, EraInfo> = {
   養老: {
     reading: 'ようろう',
     yomi: 'Yōrō',
-    start: '霊亀3年11月17日',
-    end: '養老8年2月4日',
+    start: [717, 12, 28],
+    end: [724, 3, 7],
     years: {
       '1': {
         '1': [717, 2, 20],
@@ -458,8 +458,8 @@ export const eraInfo: Record<string, EraInfo> = {
   神亀: {
     reading: 'じんき',
     yomi: 'Jinki',
-    start: '養老8年2月4日',
-    end: '神亀6年8月5日',
+    start: [724, 3, 7],
+    end: [729, 9, 6],
     years: {
       '1': {
         '1': [724, 2, 4],
@@ -552,8 +552,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天平: {
     reading: 'てんぴょう',
     yomi: 'Tempyō',
-    start: '神亀6年8月5日',
-    end: '天平21年4月14日',
+    start: [729, 9, 6],
+    end: [749, 5, 8],
     years: {
       '1': {
         '1': [729, 2, 7],
@@ -862,8 +862,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天平感宝: {
     reading: 'てんぴょうかんぽう',
     yomi: 'Tempyōkampō',
-    start: '天平21年4月14日',
-    end: '天平感宝元年7月2日',
+    start: [749, 5, 8],
+    end: [749, 8, 23],
     years: {
       '1': {
         '1': [749, 1, 27],
@@ -885,8 +885,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天平勝宝: {
     reading: 'てんぴょうしょうほう',
     yomi: 'Tempyōshōhō',
-    start: '天平感宝元年7月2日',
-    end: '天平勝宝9歳8月18日',
+    start: [749, 8, 23],
+    end: [757, 9, 10],
     years: {
       '1': {
         '1': [749, 1, 27],
@@ -1023,8 +1023,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天平宝字: {
     reading: 'てんぴょうじょうじ',
     yomi: 'Tempyōjōji',
-    start: '天平勝宝9歳8月18日',
-    end: '天平宝字9年1月7日',
+    start: [757, 9, 10],
+    end: [765, 2, 5],
     years: {
       '1': {
         '1': [757, 1, 29],
@@ -1161,8 +1161,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天平神護: {
     reading: 'てんぴょうじんご',
     yomi: 'Tempyōjingo',
-    start: '天平宝字9年1月7日',
-    end: '天平神護3年8月16日',
+    start: [765, 2, 5],
+    end: [767, 9, 17],
     years: {
       '1': {
         '1': [765, 1, 30],
@@ -1212,8 +1212,8 @@ export const eraInfo: Record<string, EraInfo> = {
   神護景雲: {
     reading: 'じんごけいうん',
     yomi: 'Jingokeiun',
-    start: '天平神護3年8月16日',
-    end: '神護景雲4年10月1日',
+    start: [767, 9, 17],
+    end: [770, 10, 27],
     years: {
       '1': {
         '1': [767, 2, 8],
@@ -1277,8 +1277,8 @@ export const eraInfo: Record<string, EraInfo> = {
   宝亀: {
     reading: 'ほうき',
     yomi: 'Hōki',
-    start: '神護景雲4年10月1日',
-    end: '宝亀12年1月1日',
+    start: [770, 10, 27],
+    end: [781, 2, 3],
     years: {
       '1': {
         '1': [770, 2, 5],
@@ -1457,8 +1457,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天応: {
     reading: 'てんおう',
     yomi: "Ten'ō",
-    start: '宝亀12年1月1日',
-    end: '天応2年8月19日',
+    start: [781, 2, 3],
+    end: [782, 10, 4],
     years: {
       '1': {
         '1': [781, 2, 3],
@@ -1494,8 +1494,8 @@ export const eraInfo: Record<string, EraInfo> = {
   延暦: {
     reading: 'えんりゃく',
     yomi: 'Enryaku',
-    start: '天応2年8月19日',
-    end: '延暦25年5月18日',
+    start: [782, 10, 4],
+    end: [806, 6, 12],
     years: {
       '1': {
         '1': [782, 1, 22],
@@ -1862,8 +1862,8 @@ export const eraInfo: Record<string, EraInfo> = {
   大同: {
     reading: 'だいどう',
     yomi: 'Daidō',
-    start: '延暦25年5月18日',
-    end: '大同5年9月19日',
+    start: [806, 6, 12],
+    end: [810, 10, 24],
     years: {
       '1': {
         '1': [806, 1, 28],
@@ -1942,8 +1942,8 @@ export const eraInfo: Record<string, EraInfo> = {
   弘仁: {
     reading: 'こうにん',
     yomi: 'Kōnin',
-    start: '大同5年9月19日',
-    end: '弘仁15年1月5日',
+    start: [810, 10, 24],
+    end: [824, 2, 12],
     years: {
       '1': {
         '1': [810, 2, 12],
@@ -2165,8 +2165,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天長: {
     reading: 'てんちょう',
     yomi: 'Tenchō',
-    start: '弘仁15年1月5日',
-    end: '天長11年1月3日',
+    start: [824, 2, 12],
+    end: [834, 2, 18],
     years: {
       '1': {
         '1': [824, 2, 8],
@@ -2331,8 +2331,8 @@ export const eraInfo: Record<string, EraInfo> = {
   承和: {
     reading: 'じょうわ',
     yomi: 'Jōwa',
-    start: '天長11年1月3日',
-    end: '承和15年6月13日',
+    start: [834, 2, 18],
+    end: [848, 7, 20],
     years: {
       '1': {
         '1': [834, 2, 16],
@@ -2554,8 +2554,8 @@ export const eraInfo: Record<string, EraInfo> = {
   嘉祥: {
     reading: 'かしょう',
     yomi: 'Kashō',
-    start: '承和15年6月13日',
-    end: '嘉祥4年4月28日',
+    start: [848, 7, 20],
+    end: [851, 6, 5],
     years: {
       '1': {
         '1': [848, 2, 13],
@@ -2619,8 +2619,8 @@ export const eraInfo: Record<string, EraInfo> = {
   仁寿: {
     reading: 'にんじゅ',
     yomi: 'Ninju',
-    start: '嘉祥4年4月28日',
-    end: '仁寿4年11月30日',
+    start: [851, 6, 5],
+    end: [854, 12, 27],
     years: {
       '1': {
         '1': [851, 2, 9],
@@ -2684,8 +2684,8 @@ export const eraInfo: Record<string, EraInfo> = {
   斉衡: {
     reading: 'さいこう',
     yomi: 'Saikō',
-    start: '仁寿4年11月30日',
-    end: '斉衡4年2月21日',
+    start: [854, 12, 27],
+    end: [857, 3, 24],
     years: {
       '1': {
         '1': [854, 2, 5],
@@ -2749,8 +2749,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天安: {
     reading: 'てんあん',
     yomi: "Ten'an",
-    start: '斉衡4年2月21日',
-    end: '天安3年4月15日',
+    start: [857, 3, 24],
+    end: [859, 5, 24],
     years: {
       '1': {
         '1': [857, 2, 3],
@@ -2800,8 +2800,8 @@ export const eraInfo: Record<string, EraInfo> = {
   貞観: {
     reading: 'じょうがん',
     yomi: 'Jōgan',
-    start: '天安3年4月15日',
-    end: '貞観19年4月16日',
+    start: [859, 5, 24],
+    end: [877, 6, 5],
     years: {
       '1': {
         '1': [859, 2, 11],
@@ -3081,8 +3081,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元慶: {
     reading: 'がんぎょう',
     yomi: 'Gangyō',
-    start: '貞観19年4月16日',
-    end: '元慶9年2月21日',
+    start: [877, 6, 5],
+    end: [885, 3, 15],
     years: {
       '1': {
         '1': [877, 1, 22],
@@ -3219,8 +3219,8 @@ export const eraInfo: Record<string, EraInfo> = {
   仁和: {
     reading: 'にんな',
     yomi: 'Ninna',
-    start: '元慶9年2月21日',
-    end: '仁和5年4月27日',
+    start: [885, 3, 15],
+    end: [889, 6, 3],
     years: {
       '1': {
         '1': [885, 1, 24],
@@ -3299,8 +3299,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛平: {
     reading: 'かんぴょう',
     yomi: 'Kampyō',
-    start: '仁和5年4月27日',
-    end: '寛平10年4月26日',
+    start: [889, 6, 3],
+    end: [898, 5, 24],
     years: {
       '1': {
         '1': [889, 2, 8],
@@ -3451,8 +3451,8 @@ export const eraInfo: Record<string, EraInfo> = {
   昌泰: {
     reading: 'しょうたい',
     yomi: 'Shōtai',
-    start: '寛平10年4月26日',
-    end: '昌泰4年7月15日',
+    start: [898, 5, 24],
+    end: [901, 9, 5],
     years: {
       '1': {
         '1': [898, 1, 30],
@@ -3517,8 +3517,8 @@ export const eraInfo: Record<string, EraInfo> = {
   延喜: {
     reading: 'えんぎ',
     yomi: 'Engi',
-    start: '昌泰4年7月15日',
-    end: '延喜23年閏4月11日',
+    start: [901, 9, 5],
+    end: [923, 6, 3],
     years: {
       '1': {
         '1': [901, 1, 28],
@@ -3856,8 +3856,8 @@ export const eraInfo: Record<string, EraInfo> = {
   延長: {
     reading: 'えんちょう',
     yomi: 'Enchō',
-    start: '延喜23年閏4月11日',
-    end: '延長9年4月26日',
+    start: [923, 6, 3],
+    end: [931, 5, 21],
     years: {
       '1': {
         '1': [923, 1, 25],
@@ -3994,8 +3994,8 @@ export const eraInfo: Record<string, EraInfo> = {
   承平: {
     reading: 'じょうへい',
     yomi: 'Jōhei',
-    start: '延長9年4月26日',
-    end: '承平8年5月22日',
+    start: [931, 5, 21],
+    end: [938, 6, 27],
     years: {
       '1': {
         '1': [931, 1, 27],
@@ -4117,8 +4117,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天慶: {
     reading: 'てんぎょう',
     yomi: 'Tengyō',
-    start: '承平8年5月22日',
-    end: '天慶10年4月22日',
+    start: [938, 6, 27],
+    end: [947, 5, 20],
     years: {
       '1': {
         '1': [938, 2, 7],
@@ -4269,8 +4269,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天暦: {
     reading: 'てんりゃく',
     yomi: 'Tenryaku',
-    start: '天慶10年4月22日',
-    end: '天暦11年10月27日',
+    start: [947, 5, 20],
+    end: [957, 11, 26],
     years: {
       '1': {
         '1': [947, 1, 30],
@@ -4435,8 +4435,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天徳: {
     reading: 'てんとく',
     yomi: 'Tentoku',
-    start: '天暦11年10月27日',
-    end: '天徳5年2月16日',
+    start: [957, 11, 26],
+    end: [961, 3, 10],
     years: {
       '1': {
         '1': [957, 2, 8],
@@ -4515,8 +4515,8 @@ export const eraInfo: Record<string, EraInfo> = {
   応和: {
     reading: 'おうわ',
     yomi: 'Ōwa',
-    start: '天徳5年2月16日',
-    end: '応和4年7月10日',
+    start: [961, 3, 10],
+    end: [964, 8, 24],
     years: {
       '1': {
         '1': [961, 1, 25],
@@ -4581,8 +4581,8 @@ export const eraInfo: Record<string, EraInfo> = {
   康保: {
     reading: 'こうほう',
     yomi: 'Kōhō',
-    start: '応和4年7月10日',
-    end: '康保5年8月13日',
+    start: [964, 8, 24],
+    end: [968, 9, 13],
     years: {
       '1': {
         '1': [964, 2, 21],
@@ -4660,8 +4660,8 @@ export const eraInfo: Record<string, EraInfo> = {
   安和: {
     reading: 'あんな',
     yomi: 'Anna',
-    start: '康保5年8月13日',
-    end: '安和3年3月25日',
+    start: [968, 9, 13],
+    end: [970, 5, 8],
     years: {
       '1': {
         '1': [968, 2, 7],
@@ -4711,8 +4711,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天禄: {
     reading: 'てんろく',
     yomi: 'Tenroku',
-    start: '安和3年3月25日',
-    end: '天禄4年12月20日',
+    start: [970, 5, 8],
+    end: [974, 1, 21],
     years: {
       '1': {
         '1': [970, 2, 14],
@@ -4776,8 +4776,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天延: {
     reading: 'てんえん',
     yomi: "Ten'en",
-    start: '天禄4年12月20日',
-    end: '天延4年7月13日',
+    start: [974, 1, 21],
+    end: [976, 8, 16],
     years: {
       '1': {
         '1': [973, 2, 11],
@@ -4841,8 +4841,8 @@ export const eraInfo: Record<string, EraInfo> = {
   貞元: {
     reading: 'じょうげん',
     yomi: 'Jōgen',
-    start: '天延4年7月13日',
-    end: '貞元3年11月29日',
+    start: [976, 8, 16],
+    end: [979, 1, 5],
     years: {
       '1': {
         '1': [976, 2, 8],
@@ -4892,8 +4892,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天元: {
     reading: 'てんげん',
     yomi: 'Tengen',
-    start: '貞元3年11月29日',
-    end: '天元6年4月15日',
+    start: [979, 1, 5],
+    end: [983, 6, 3],
     years: {
       '1': {
         '1': [978, 2, 15],
@@ -4986,8 +4986,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永観: {
     reading: 'えいかん',
     yomi: 'Eikan',
-    start: '天元6年4月15日',
-    end: '永観3年4月27日',
+    start: [983, 6, 3],
+    end: [985, 5, 24],
     years: {
       '1': {
         '1': [983, 2, 21],
@@ -5037,8 +5037,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛和: {
     reading: 'かんな',
     yomi: 'Kanna',
-    start: '永観3年4月27日',
-    end: '寛和3年4月5日',
+    start: [985, 5, 24],
+    end: [987, 5, 10],
     years: {
       '1': {
         '1': [985, 1, 29],
@@ -5088,8 +5088,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永延: {
     reading: 'えいえん',
     yomi: 'Eien',
-    start: '寛和3年4月5日',
-    end: '永延3年8月8日',
+    start: [987, 5, 10],
+    end: [989, 9, 15],
     years: {
       '1': {
         '1': [987, 2, 6],
@@ -5139,8 +5139,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永祚: {
     reading: 'えいそ',
     yomi: 'Eiso',
-    start: '永延3年8月8日',
-    end: '永祚2年11月7日',
+    start: [989, 9, 15],
+    end: [990, 12, 1],
     years: {
       '1': {
         '1': [989, 2, 14],
@@ -5175,8 +5175,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正暦: {
     reading: 'しょうりゃく',
     yomi: 'Shōryaku',
-    start: '永祚2年11月7日',
-    end: '正暦6年2月22日',
+    start: [990, 12, 1],
+    end: [995, 3, 30],
     years: {
       '1': {
         '1': [990, 2, 4],
@@ -5269,8 +5269,8 @@ export const eraInfo: Record<string, EraInfo> = {
   長徳: {
     reading: 'ちょうとく',
     yomi: 'Chōtoku',
-    start: '正暦6年2月22日',
-    end: '長徳5年1月13日',
+    start: [995, 3, 30],
+    end: [999, 2, 6],
     years: {
       '1': {
         '1': [995, 2, 8],
@@ -5349,8 +5349,8 @@ export const eraInfo: Record<string, EraInfo> = {
   長保: {
     reading: 'ちょうほう',
     yomi: 'Chōhō',
-    start: '長徳5年1月13日',
-    end: '長保6年7月20日',
+    start: [999, 2, 6],
+    end: [1004, 8, 14],
     years: {
       '1': {
         '1': [999, 1, 25],
@@ -5444,8 +5444,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛弘: {
     reading: 'かんこう',
     yomi: 'Kankō',
-    start: '長保6年7月20日',
-    end: '寛弘9年12月25日',
+    start: [1004, 8, 14],
+    end: [1013, 2, 14],
     years: {
       '1': {
         '1': [1004, 1, 31],
@@ -5582,8 +5582,8 @@ export const eraInfo: Record<string, EraInfo> = {
   長和: {
     reading: 'ちょうわ',
     yomi: 'Chōwa',
-    start: '寛弘9年12月25日',
-    end: '長和6年4月23日',
+    start: [1013, 2, 14],
+    end: [1017, 5, 27],
     years: {
       '1': {
         '1': [1012, 2, 1],
@@ -5676,8 +5676,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛仁: {
     reading: 'かんにん',
     yomi: 'Kannin',
-    start: '長和6年4月23日',
-    end: '寛仁5年2月2日',
+    start: [1017, 5, 27],
+    end: [1021, 3, 23],
     years: {
       '1': {
         '1': [1017, 2, 6],
@@ -5756,8 +5756,8 @@ export const eraInfo: Record<string, EraInfo> = {
   治安: {
     reading: 'じあん',
     yomi: 'Jian',
-    start: '寛仁5年2月2日',
-    end: '治安4年7月13日',
+    start: [1021, 3, 23],
+    end: [1024, 8, 25],
     years: {
       '1': {
         '1': [1021, 2, 21],
@@ -5821,8 +5821,8 @@ export const eraInfo: Record<string, EraInfo> = {
   万寿: {
     reading: 'まんじゅ',
     yomi: 'Manju',
-    start: '治安4年7月13日',
-    end: '万寿5年7月25日',
+    start: [1024, 8, 25],
+    end: [1028, 8, 24],
     years: {
       '1': {
         '1': [1024, 2, 19],
@@ -5900,8 +5900,8 @@ export const eraInfo: Record<string, EraInfo> = {
   長元: {
     reading: 'ちょうげん',
     yomi: 'Chōgen',
-    start: '万寿5年7月25日',
-    end: '長元10年4月21日',
+    start: [1028, 8, 24],
+    end: [1037, 5, 15],
     years: {
       '1': {
         '1': [1028, 2, 5],
@@ -6052,8 +6052,8 @@ export const eraInfo: Record<string, EraInfo> = {
   長暦: {
     reading: 'ちょうりゃく',
     yomi: 'Chōryaku',
-    start: '長元10年4月21日',
-    end: '長暦4年11月10日',
+    start: [1037, 5, 15],
+    end: [1040, 12, 22],
     years: {
       '1': {
         '1': [1037, 1, 25],
@@ -6118,8 +6118,8 @@ export const eraInfo: Record<string, EraInfo> = {
   長久: {
     reading: 'ちょうきゅう',
     yomi: 'Chōkyū',
-    start: '長暦4年11月10日',
-    end: '長久5年11月24日',
+    start: [1040, 12, 22],
+    end: [1044, 12, 22],
     years: {
       '1': {
         '1': [1040, 2, 21],
@@ -6197,8 +6197,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛徳: {
     reading: 'かんとく',
     yomi: 'Kantoku',
-    start: '長久5年11月24日',
-    end: '寛徳3年4月14日',
+    start: [1044, 12, 22],
+    end: [1046, 5, 28],
     years: {
       '1': {
         '1': [1044, 2, 8],
@@ -6248,8 +6248,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永承: {
     reading: 'えいしょう',
     yomi: 'Eishō',
-    start: '寛徳3年4月14日',
-    end: '永承8年1月11日',
+    start: [1046, 5, 28],
+    end: [1053, 2, 8],
     years: {
       '1': {
         '1': [1046, 2, 15],
@@ -6371,8 +6371,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天喜: {
     reading: 'てんぎ',
     yomi: 'Tengi',
-    start: '永承8年1月11日',
-    end: '天喜6年8月29日',
+    start: [1053, 2, 8],
+    end: [1058, 9, 25],
     years: {
       '1': {
         '1': [1053, 1, 29],
@@ -6466,8 +6466,8 @@ export const eraInfo: Record<string, EraInfo> = {
   康平: {
     reading: 'こうへい',
     yomi: 'Kōhei',
-    start: '天喜6年8月29日',
-    end: '康平8年8月2日',
+    start: [1058, 9, 25],
+    end: [1065, 9, 10],
     years: {
       '1': {
         '1': [1058, 2, 2],
@@ -6589,8 +6589,8 @@ export const eraInfo: Record<string, EraInfo> = {
   治暦: {
     reading: 'じりゃく',
     yomi: 'Jiryaku',
-    start: '康平8年8月2日',
-    end: '治暦5年4月13日',
+    start: [1065, 9, 10],
+    end: [1069, 5, 12],
     years: {
       '1': {
         '1': [1065, 2, 14],
@@ -6669,8 +6669,8 @@ export const eraInfo: Record<string, EraInfo> = {
   延久: {
     reading: 'えんきゅう',
     yomi: 'Enkyū',
-    start: '治暦5年4月13日',
-    end: '延久6年8月23日',
+    start: [1069, 5, 12],
+    end: [1074, 9, 22],
     years: {
       '1': {
         '1': [1069, 2, 1],
@@ -6763,8 +6763,8 @@ export const eraInfo: Record<string, EraInfo> = {
   承保: {
     reading: 'じょうほう',
     yomi: 'Jōhō',
-    start: '延久6年8月23日',
-    end: '承保4年11月17日',
+    start: [1074, 9, 22],
+    end: [1077, 12, 11],
     years: {
       '1': {
         '1': [1074, 2, 5],
@@ -6829,8 +6829,8 @@ export const eraInfo: Record<string, EraInfo> = {
   承暦: {
     reading: 'じょうりゃく',
     yomi: 'Jōryaku',
-    start: '承保4年11月17日',
-    end: '承暦5年2月10日',
+    start: [1077, 12, 11],
+    end: [1081, 3, 28],
     years: {
       '1': {
         '1': [1077, 2, 2],
@@ -6909,8 +6909,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永保: {
     reading: 'えいほう',
     yomi: 'Eihō',
-    start: '承暦5年2月10日',
-    end: '永保4年2月7日',
+    start: [1081, 3, 28],
+    end: [1084, 3, 21],
     years: {
       '1': {
         '1': [1081, 2, 18],
@@ -6974,8 +6974,8 @@ export const eraInfo: Record<string, EraInfo> = {
   応徳: {
     reading: 'おうとく',
     yomi: 'Ōtoku',
-    start: '永保4年2月7日',
-    end: '応徳4年4月7日',
+    start: [1084, 3, 21],
+    end: [1087, 5, 17],
     years: {
       '1': {
         '1': [1084, 2, 15],
@@ -7039,8 +7039,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛治: {
     reading: 'かんじ',
     yomi: 'Kanji',
-    start: '応徳4年4月7日',
-    end: '寛治8年12月15日',
+    start: [1087, 5, 17],
+    end: [1095, 1, 29],
     years: {
       '1': {
         '1': [1087, 2, 12],
@@ -7162,8 +7162,8 @@ export const eraInfo: Record<string, EraInfo> = {
   嘉保: {
     reading: 'かほう',
     yomi: 'Kahō',
-    start: '寛治8年12月15日',
-    end: '嘉保3年12月17日',
+    start: [1095, 1, 29],
+    end: [1097, 1, 9],
     years: {
       '1': {
         '1': [1094, 1, 25],
@@ -7213,8 +7213,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永長: {
     reading: 'えいちょう',
     yomi: 'Eichō',
-    start: '嘉保3年12月17日',
-    end: '永長2年11月21日',
+    start: [1097, 1, 9],
+    end: [1098, 1, 2],
     years: {
       '1': {
         '1': [1096, 2, 3],
@@ -7250,8 +7250,8 @@ export const eraInfo: Record<string, EraInfo> = {
   承徳: {
     reading: 'じょうとく',
     yomi: 'Jōtoku',
-    start: '永長2年11月21日',
-    end: '承徳3年8月28日',
+    start: [1098, 1, 2],
+    end: [1099, 9, 21],
     years: {
       '1': {
         '1': [1097, 1, 22],
@@ -7302,8 +7302,8 @@ export const eraInfo: Record<string, EraInfo> = {
   康和: {
     reading: 'こうわ',
     yomi: 'Kōwa',
-    start: '承徳3年8月28日',
-    end: '康和6年2月10日',
+    start: [1099, 9, 21],
+    end: [1104, 3, 15],
     years: {
       '1': {
         '1': [1099, 1, 30],
@@ -7396,8 +7396,8 @@ export const eraInfo: Record<string, EraInfo> = {
   長治: {
     reading: 'ちょうじ',
     yomi: 'Chōji',
-    start: '康和6年2月10日',
-    end: '長治3年4月9日',
+    start: [1104, 3, 15],
+    end: [1106, 5, 20],
     years: {
       '1': {
         '1': [1104, 2, 6],
@@ -7447,8 +7447,8 @@ export const eraInfo: Record<string, EraInfo> = {
   嘉承: {
     reading: 'かじょう',
     yomi: 'Kajō',
-    start: '長治3年4月9日',
-    end: '嘉承3年8月3日',
+    start: [1106, 5, 20],
+    end: [1108, 9, 16],
     years: {
       '1': {
         '1': [1106, 2, 13],
@@ -7498,8 +7498,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天仁: {
     reading: 'てんにん',
     yomi: 'Tennin',
-    start: '嘉承3年8月3日',
-    end: '天仁3年7月13日',
+    start: [1108, 9, 16],
+    end: [1110, 8, 7],
     years: {
       '1': {
         '1': [1108, 2, 21],
@@ -7549,8 +7549,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天永: {
     reading: 'てんねい',
     yomi: 'Tennei',
-    start: '天仁3年7月13日',
-    end: '天永4年7月13日',
+    start: [1110, 8, 7],
+    end: [1113, 9, 1],
     years: {
       '1': {
         '1': [1110, 1, 29],
@@ -7615,8 +7615,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永久: {
     reading: 'えいきゅう',
     yomi: 'Eikyū',
-    start: '天永4年7月13日',
-    end: '永久6年4月3日',
+    start: [1113, 9, 1],
+    end: [1118, 5, 2],
     years: {
       '1': {
         '1': [1113, 1, 27],
@@ -7710,8 +7710,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元永: {
     reading: 'げんえい',
     yomi: "Gen'ei",
-    start: '永久6年4月3日',
-    end: '元永3年4月10日',
+    start: [1118, 5, 2],
+    end: [1120, 5, 16],
     years: {
       '1': {
         '1': [1118, 1, 31],
@@ -7761,8 +7761,8 @@ export const eraInfo: Record<string, EraInfo> = {
   保安: {
     reading: 'ほうあん',
     yomi: 'Hōan',
-    start: '元永3年4月10日',
-    end: '保安5年4月3日',
+    start: [1120, 5, 16],
+    end: [1124, 5, 25],
     years: {
       '1': {
         '1': [1120, 2, 8],
@@ -7841,8 +7841,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天治: {
     reading: 'てんじ',
     yomi: 'Tenji',
-    start: '保安5年4月3日',
-    end: '天治3年1月22日',
+    start: [1124, 5, 25],
+    end: [1126, 2, 22],
     years: {
       '1': {
         '1': [1124, 1, 26],
@@ -7893,8 +7893,8 @@ export const eraInfo: Record<string, EraInfo> = {
   大治: {
     reading: 'だいじ',
     yomi: 'Daiji',
-    start: '天治3年1月22日',
-    end: '大治6年1月29日',
+    start: [1126, 2, 22],
+    end: [1131, 3, 7],
     years: {
       '1': {
         '1': [1126, 2, 1],
@@ -7987,8 +7987,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天承: {
     reading: 'てんしょう',
     yomi: 'Tenshō',
-    start: '大治6年1月29日',
-    end: '天承2年8月11日',
+    start: [1131, 3, 7],
+    end: [1132, 9, 28],
     years: {
       '1': {
         '1': [1131, 2, 7],
@@ -8024,8 +8024,8 @@ export const eraInfo: Record<string, EraInfo> = {
   長承: {
     reading: 'ちょうしょう',
     yomi: 'Chōshō',
-    start: '天承2年8月11日',
-    end: '長承4年4月27日',
+    start: [1132, 9, 28],
+    end: [1135, 6, 17],
     years: {
       '1': {
         '1': [1132, 1, 27],
@@ -8090,8 +8090,8 @@ export const eraInfo: Record<string, EraInfo> = {
   保延: {
     reading: 'ほうえん',
     yomi: 'Hōen',
-    start: '長承4年4月27日',
-    end: '保延7年7月10日',
+    start: [1135, 6, 17],
+    end: [1141, 8, 20],
     years: {
       '1': {
         '1': [1135, 2, 22],
@@ -8198,8 +8198,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永治: {
     reading: 'えいじ',
     yomi: 'Eiji',
-    start: '保延7年7月10日',
-    end: '永治2年4月28日',
+    start: [1141, 8, 20],
+    end: [1142, 6, 1],
     years: {
       '1': {
         '1': [1141, 2, 16],
@@ -8234,8 +8234,8 @@ export const eraInfo: Record<string, EraInfo> = {
   康治: {
     reading: 'こうじ',
     yomi: 'Kōji',
-    start: '永治2年4月28日',
-    end: '康治3年2月23日',
+    start: [1142, 6, 1],
+    end: [1144, 4, 4],
     years: {
       '1': {
         '1': [1142, 2, 5],
@@ -8285,8 +8285,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天養: {
     reading: 'てんよう',
     yomi: "Ten'yō",
-    start: '康治3年2月23日',
-    end: '天養2年7月22日',
+    start: [1144, 4, 4],
+    end: [1145, 8, 19],
     years: {
       '1': {
         '1': [1144, 2, 13],
@@ -8322,8 +8322,8 @@ export const eraInfo: Record<string, EraInfo> = {
   久安: {
     reading: 'きゅうあん',
     yomi: 'Kyūan',
-    start: '天養2年7月22日',
-    end: '久安7年1月26日',
+    start: [1145, 8, 19],
+    end: [1151, 2, 21],
     years: {
       '1': {
         '1': [1145, 2, 1],
@@ -8431,8 +8431,8 @@ export const eraInfo: Record<string, EraInfo> = {
   仁平: {
     reading: 'にんぺい',
     yomi: 'Nimpei',
-    start: '久安7年1月26日',
-    end: '仁平4年10月28日',
+    start: [1151, 2, 21],
+    end: [1154, 12, 11],
     years: {
       '1': {
         '1': [1151, 1, 27],
@@ -8497,8 +8497,8 @@ export const eraInfo: Record<string, EraInfo> = {
   久寿: {
     reading: 'きゅうじゅ',
     yomi: 'Kyūju',
-    start: '仁平4年10月28日',
-    end: '久寿3年4月27日',
+    start: [1154, 12, 11],
+    end: [1156, 5, 25],
     years: {
       '1': {
         '1': [1154, 2, 21],
@@ -8548,8 +8548,8 @@ export const eraInfo: Record<string, EraInfo> = {
   保元: {
     reading: 'ほうげん',
     yomi: 'Hōgen',
-    start: '久寿3年4月27日',
-    end: '保元4年4月20日',
+    start: [1156, 5, 25],
+    end: [1159, 5, 16],
     years: {
       '1': {
         '1': [1156, 1, 31],
@@ -8614,8 +8614,8 @@ export const eraInfo: Record<string, EraInfo> = {
   平治: {
     reading: 'へいじ',
     yomi: 'Heiji',
-    start: '保元4年4月20日',
-    end: '平治2年1月10日',
+    start: [1159, 5, 16],
+    end: [1160, 2, 25],
     years: {
       '1': {
         '1': [1159, 1, 28],
@@ -8651,8 +8651,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永暦: {
     reading: 'えいりゃく',
     yomi: 'Eiryaku',
-    start: '平治2年1月10日',
-    end: '永暦2年9月4日',
+    start: [1160, 2, 25],
+    end: [1161, 10, 1],
     years: {
       '1': {
         '1': [1160, 2, 16],
@@ -8687,8 +8687,8 @@ export const eraInfo: Record<string, EraInfo> = {
   応保: {
     reading: 'おうほう',
     yomi: 'Ōhō',
-    start: '永暦2年9月4日',
-    end: '応保3年3月29日',
+    start: [1161, 10, 1],
+    end: [1163, 5, 11],
     years: {
       '1': {
         '1': [1161, 2, 4],
@@ -8738,8 +8738,8 @@ export const eraInfo: Record<string, EraInfo> = {
   長寛: {
     reading: 'ちょうかん',
     yomi: 'Chōkan',
-    start: '応保3年3月29日',
-    end: '長寛3年6月5日',
+    start: [1163, 5, 11],
+    end: [1165, 7, 21],
     years: {
       '1': {
         '1': [1163, 2, 12],
@@ -8789,8 +8789,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永万: {
     reading: 'えいまん',
     yomi: 'Eiman',
-    start: '長寛3年6月5日',
-    end: '永万2年8月27日',
+    start: [1165, 7, 21],
+    end: [1166, 9, 30],
     years: {
       '1': {
         '1': [1165, 2, 20],
@@ -8825,8 +8825,8 @@ export const eraInfo: Record<string, EraInfo> = {
   仁安: {
     reading: 'にんあん',
     yomi: "Nin'an",
-    start: '永万2年8月27日',
-    end: '仁安4年4月8日',
+    start: [1166, 9, 30],
+    end: [1169, 5, 13],
     years: {
       '1': {
         '1': [1166, 2, 10],
@@ -8890,8 +8890,8 @@ export const eraInfo: Record<string, EraInfo> = {
   嘉応: {
     reading: 'かおう',
     yomi: 'Kaō',
-    start: '仁安4年4月8日',
-    end: '嘉応3年4月21日',
+    start: [1169, 5, 13],
+    end: [1171, 6, 3],
     years: {
       '1': {
         '1': [1169, 2, 6],
@@ -8941,8 +8941,8 @@ export const eraInfo: Record<string, EraInfo> = {
   承安: {
     reading: 'しょうあん',
     yomi: 'Shōan',
-    start: '嘉応3年4月21日',
-    end: '承安5年7月28日',
+    start: [1171, 6, 3],
+    end: [1175, 8, 23],
     years: {
       '1': {
         '1': [1171, 2, 14],
@@ -9021,8 +9021,8 @@ export const eraInfo: Record<string, EraInfo> = {
   安元: {
     reading: 'あんげん',
     yomi: 'Angen',
-    start: '承安5年7月28日',
-    end: '安元3年8月4日',
+    start: [1175, 8, 23],
+    end: [1177, 9, 5],
     years: {
       '1': {
         '1': [1175, 1, 31],
@@ -9072,8 +9072,8 @@ export const eraInfo: Record<string, EraInfo> = {
   治承: {
     reading: 'じしょう',
     yomi: 'Jishō',
-    start: '安元3年8月4日',
-    end: '治承5年7月14日',
+    start: [1177, 9, 5],
+    end: [1181, 9, 1],
     years: {
       '1': {
         '1': [1177, 2, 8],
@@ -9195,8 +9195,8 @@ export const eraInfo: Record<string, EraInfo> = {
   養和: {
     reading: 'ようわ',
     yomi: 'Yōwa',
-    start: '治承5年7月14日',
-    end: '養和2年5月27日',
+    start: [1181, 9, 1],
+    end: [1182, 7, 6],
     years: {
       '1': {
         '1': [1181, 1, 24],
@@ -9232,8 +9232,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寿永: {
     reading: 'じゅえい',
     yomi: 'Juei',
-    start: '養和2年5月27日',
-    end: '寿永3年4月16日',
+    start: [1182, 7, 6],
+    end: [1184, 6, 3],
     years: {
       '1': {
         '1': [1182, 2, 12],
@@ -9297,8 +9297,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元暦: {
     reading: 'げんりゃく',
     yomi: 'Genryaku',
-    start: '寿永3年4月16日',
-    end: '元暦2年8月14日',
+    start: [1184, 6, 3],
+    end: [1185, 9, 16],
     years: {
       '1': {
         '1': [1184, 2, 21],
@@ -9333,8 +9333,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文治: {
     reading: 'ぶんじ',
     yomi: 'Bunji',
-    start: '元暦2年8月14日',
-    end: '文治6年4月11日',
+    start: [1185, 9, 16],
+    end: [1190, 5, 23],
     years: {
       '1': {
         '1': [1185, 2, 9],
@@ -9427,8 +9427,8 @@ export const eraInfo: Record<string, EraInfo> = {
   建久: {
     reading: 'けんきゅう',
     yomi: 'Kenkyū',
-    start: '文治6年4月11日',
-    end: '建久10年4月27日',
+    start: [1190, 5, 23],
+    end: [1199, 5, 30],
     years: {
       '1': {
         '1': [1190, 2, 14],
@@ -9578,8 +9578,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正治: {
     reading: 'しょうじ',
     yomi: 'Shōji',
-    start: '建久10年4月27日',
-    end: '正治3年2月13日',
+    start: [1199, 5, 30],
+    end: [1201, 3, 26],
     years: {
       '1': {
         '1': [1199, 2, 4],
@@ -9629,8 +9629,8 @@ export const eraInfo: Record<string, EraInfo> = {
   建仁: {
     reading: 'けんにん',
     yomi: 'Kennin',
-    start: '正治3年2月13日',
-    end: '建仁4年2月20日',
+    start: [1201, 3, 26],
+    end: [1204, 3, 30],
     years: {
       '1': {
         '1': [1201, 2, 12],
@@ -9694,8 +9694,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元久: {
     reading: 'げんきゅう',
     yomi: 'Genkyū',
-    start: '建仁4年2月20日',
-    end: '元久3年4月27日',
+    start: [1204, 3, 30],
+    end: [1206, 6, 12],
     years: {
       '1': {
         '1': [1204, 2, 10],
@@ -9745,8 +9745,8 @@ export const eraInfo: Record<string, EraInfo> = {
   建永: {
     reading: 'けんえい',
     yomi: "Ken'ei",
-    start: '元久3年4月27日',
-    end: '建永2年10月25日',
+    start: [1206, 6, 12],
+    end: [1207, 11, 23],
     years: {
       '1': {
         '1': [1206, 2, 17],
@@ -9781,8 +9781,8 @@ export const eraInfo: Record<string, EraInfo> = {
   承元: {
     reading: 'じょうげん',
     yomi: 'Jōgen',
-    start: '建永2年10月25日',
-    end: '承元5年3月9日',
+    start: [1207, 11, 23],
+    end: [1211, 4, 30],
     years: {
       '1': {
         '1': [1207, 2, 6],
@@ -9861,8 +9861,8 @@ export const eraInfo: Record<string, EraInfo> = {
   建暦: {
     reading: 'けんりゃく',
     yomi: 'Kenryaku',
-    start: '承元5年3月9日',
-    end: '建暦3年12月6日',
+    start: [1211, 4, 30],
+    end: [1214, 1, 25],
     years: {
       '1': {
         '1': [1211, 1, 24],
@@ -9913,8 +9913,8 @@ export const eraInfo: Record<string, EraInfo> = {
   建保: {
     reading: 'けんぽう',
     yomi: 'Kempō',
-    start: '建暦3年12月6日',
-    end: '建保7年4月12日',
+    start: [1214, 1, 25],
+    end: [1219, 6, 3],
     years: {
       '1': {
         '1': [1213, 1, 31],
@@ -10022,8 +10022,8 @@ export const eraInfo: Record<string, EraInfo> = {
   承久: {
     reading: 'じょうきゅう',
     yomi: 'Jōkyū',
-    start: '建保7年4月12日',
-    end: '承久4年4月13日',
+    start: [1219, 6, 3],
+    end: [1222, 6, 1],
     years: {
       '1': {
         '1': [1219, 1, 25],
@@ -10088,8 +10088,8 @@ export const eraInfo: Record<string, EraInfo> = {
   貞応: {
     reading: 'じょうおう',
     yomi: 'Jōō',
-    start: '承久4年4月13日',
-    end: '貞応3年11月20日',
+    start: [1222, 6, 1],
+    end: [1225, 1, 7],
     years: {
       '1': {
         '1': [1222, 2, 20],
@@ -10139,8 +10139,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元仁: {
     reading: 'げんにん',
     yomi: 'Gennin',
-    start: '貞応3年11月20日',
-    end: '元仁2年4月20日',
+    start: [1225, 1, 7],
+    end: [1225, 6, 4],
     years: {
       '1': {
         '1': [1224, 1, 29],
@@ -10176,8 +10176,8 @@ export const eraInfo: Record<string, EraInfo> = {
   嘉禄: {
     reading: 'かろく',
     yomi: 'Karoku',
-    start: '元仁2年4月20日',
-    end: '嘉禄3年12月10日',
+    start: [1225, 6, 4],
+    end: [1228, 1, 25],
     years: {
       '1': {
         '1': [1225, 2, 16],
@@ -10227,8 +10227,8 @@ export const eraInfo: Record<string, EraInfo> = {
   安貞: {
     reading: 'あんてい',
     yomi: 'Antei',
-    start: '嘉禄3年12月10日',
-    end: '安貞3年3月5日',
+    start: [1228, 1, 25],
+    end: [1229, 4, 7],
     years: {
       '1': {
         '1': [1227, 1, 26],
@@ -10278,8 +10278,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛喜: {
     reading: 'かんき',
     yomi: 'Kanki',
-    start: '安貞3年3月5日',
-    end: '寛喜4年4月2日',
+    start: [1229, 4, 7],
+    end: [1232, 4, 30],
     years: {
       '1': {
         '1': [1229, 2, 3],
@@ -10344,8 +10344,8 @@ export const eraInfo: Record<string, EraInfo> = {
   貞永: {
     reading: 'じょうえい',
     yomi: 'Jōei',
-    start: '寛喜4年4月2日',
-    end: '貞永2年4月15日',
+    start: [1232, 4, 30],
+    end: [1233, 6, 1],
     years: {
       '1': {
         '1': [1232, 1, 31],
@@ -10381,8 +10381,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天福: {
     reading: 'てんぷく',
     yomi: 'Tempuku',
-    start: '貞永2年4月15日',
-    end: '天福2年11月5日',
+    start: [1233, 6, 1],
+    end: [1234, 12, 4],
     years: {
       '1': {
         '1': [1233, 2, 18],
@@ -10417,8 +10417,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文暦: {
     reading: 'ぶんりゃく',
     yomi: 'Bunryaku',
-    start: '天福2年11月5日',
-    end: '文暦2年9月19日',
+    start: [1234, 12, 4],
+    end: [1235, 11, 8],
     years: {
       '1': {
         '1': [1234, 2, 7],
@@ -10454,8 +10454,8 @@ export const eraInfo: Record<string, EraInfo> = {
   嘉禎: {
     reading: 'かてい',
     yomi: 'Katei',
-    start: '文暦2年9月19日',
-    end: '嘉禎4年11月23日',
+    start: [1235, 11, 8],
+    end: [1239, 1, 6],
     years: {
       '1': {
         '1': [1235, 1, 28],
@@ -10520,8 +10520,8 @@ export const eraInfo: Record<string, EraInfo> = {
   暦仁: {
     reading: 'りゃくにん',
     yomi: 'Ryakunin',
-    start: '嘉禎4年11月23日',
-    end: '暦仁2年2月7日',
+    start: [1239, 1, 6],
+    end: [1239, 3, 20],
     years: {
       '1': {
         '1': [1238, 1, 25],
@@ -10557,8 +10557,8 @@ export const eraInfo: Record<string, EraInfo> = {
   延応: {
     reading: 'えんおう',
     yomi: "En'ō",
-    start: '暦仁2年2月7日',
-    end: '延応2年7月16日',
+    start: [1239, 3, 20],
+    end: [1240, 8, 12],
     years: {
       '1': {
         '1': [1239, 2, 13],
@@ -10594,8 +10594,8 @@ export const eraInfo: Record<string, EraInfo> = {
   仁治: {
     reading: 'にんじ',
     yomi: 'Ninji',
-    start: '延応2年7月16日',
-    end: '仁治4年2月26日',
+    start: [1240, 8, 12],
+    end: [1243, 3, 25],
     years: {
       '1': {
         '1': [1240, 2, 2],
@@ -10660,8 +10660,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛元: {
     reading: 'かんげん',
     yomi: 'Kangen',
-    start: '仁治4年2月26日',
-    end: '寛元5年2月28日',
+    start: [1243, 3, 25],
+    end: [1247, 4, 12],
     years: {
       '1': {
         '1': [1243, 1, 29],
@@ -10740,8 +10740,8 @@ export const eraInfo: Record<string, EraInfo> = {
   宝治: {
     reading: 'ほうじ',
     yomi: 'Hōji',
-    start: '寛元5年2月28日',
-    end: '宝治3年3月18日',
+    start: [1247, 4, 12],
+    end: [1249, 5, 9],
     years: {
       '1': {
         '1': [1247, 2, 14],
@@ -10791,8 +10791,8 @@ export const eraInfo: Record<string, EraInfo> = {
   建長: {
     reading: 'けんちょう',
     yomi: 'Kenchō',
-    start: '宝治3年3月18日',
-    end: '建長8年10月5日',
+    start: [1249, 5, 9],
+    end: [1256, 10, 31],
     years: {
       '1': {
         '1': [1249, 2, 21],
@@ -10913,8 +10913,8 @@ export const eraInfo: Record<string, EraInfo> = {
   康元: {
     reading: 'こうげん',
     yomi: 'Kōgen',
-    start: '建長8年10月5日',
-    end: '康元2年3月14日',
+    start: [1256, 10, 31],
+    end: [1257, 4, 7],
     years: {
       '1': {
         '1': [1256, 2, 5],
@@ -10950,8 +10950,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正嘉: {
     reading: 'しょうか',
     yomi: 'Shōka',
-    start: '康元2年3月14日',
-    end: '正嘉3年3月26日',
+    start: [1257, 4, 7],
+    end: [1259, 4, 27],
     years: {
       '1': {
         '1': [1257, 1, 24],
@@ -11002,8 +11002,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正元: {
     reading: 'しょうげん',
     yomi: 'Shōgen',
-    start: '正嘉3年3月26日',
-    end: '正元2年4月13日',
+    start: [1259, 4, 27],
+    end: [1260, 5, 31],
     years: {
       '1': {
         '1': [1259, 2, 1],
@@ -11039,8 +11039,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文応: {
     reading: 'ぶんおう',
     yomi: "Bun'ō",
-    start: '正元2年4月13日',
-    end: '文応2年2月20日',
+    start: [1260, 5, 31],
+    end: [1261, 3, 29],
     years: {
       '1': {
         '1': [1260, 2, 20],
@@ -11075,8 +11075,8 @@ export const eraInfo: Record<string, EraInfo> = {
   弘長: {
     reading: 'こうちょう',
     yomi: 'Kōchō',
-    start: '文応2年2月20日',
-    end: '弘長4年2月28日',
+    start: [1261, 3, 29],
+    end: [1264, 4, 3],
     years: {
       '1': {
         '1': [1261, 2, 8],
@@ -11140,8 +11140,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文永: {
     reading: 'ぶんえい',
     yomi: "Bun'ei",
-    start: '弘長4年2月28日',
-    end: '文永12年4月25日',
+    start: [1264, 4, 3],
+    end: [1275, 5, 29],
     years: {
       '1': {
         '1': [1264, 2, 7],
@@ -11320,8 +11320,8 @@ export const eraInfo: Record<string, EraInfo> = {
   建治: {
     reading: 'けんじ',
     yomi: 'Kenji',
-    start: '文永12年4月25日',
-    end: '建治4年2月29日',
+    start: [1275, 5, 29],
+    end: [1278, 3, 30],
     years: {
       '1': {
         '1': [1275, 2, 5],
@@ -11386,8 +11386,8 @@ export const eraInfo: Record<string, EraInfo> = {
   弘安: {
     reading: 'こうあん',
     yomi: 'Kōan',
-    start: '建治4年2月29日',
-    end: '弘安11年4月28日',
+    start: [1278, 3, 30],
+    end: [1288, 6, 5],
     years: {
       '1': {
         '1': [1278, 2, 1],
@@ -11552,8 +11552,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正応: {
     reading: 'しょうおう',
     yomi: 'Shōō',
-    start: '弘安11年4月28日',
-    end: '正応6年8月5日',
+    start: [1288, 6, 5],
+    end: [1293, 9, 13],
     years: {
       '1': {
         '1': [1288, 2, 11],
@@ -11646,8 +11646,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永仁: {
     reading: 'えいにん',
     yomi: 'Einin',
-    start: '正応6年8月5日',
-    end: '永仁7年4月25日',
+    start: [1293, 9, 13],
+    end: [1299, 6, 1],
     years: {
       '1': {
         '1': [1293, 2, 15],
@@ -11754,8 +11754,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正安: {
     reading: 'しょうあん',
     yomi: 'Shōan',
-    start: '永仁7年4月25日',
-    end: '正安4年11月21日',
+    start: [1299, 6, 1],
+    end: [1302, 12, 18],
     years: {
       '1': {
         '1': [1299, 2, 9],
@@ -11819,8 +11819,8 @@ export const eraInfo: Record<string, EraInfo> = {
   乾元: {
     reading: 'けんげん',
     yomi: 'Kengen',
-    start: '正安4年11月21日',
-    end: '乾元2年8月5日',
+    start: [1302, 12, 18],
+    end: [1303, 9, 24],
     years: {
       '1': {
         '1': [1302, 2, 7],
@@ -11856,8 +11856,8 @@ export const eraInfo: Record<string, EraInfo> = {
   嘉元: {
     reading: 'かげん',
     yomi: 'Kagen',
-    start: '乾元2年8月5日',
-    end: '嘉元4年12月14日',
+    start: [1303, 9, 24],
+    end: [1307, 1, 26],
     years: {
       '1': {
         '1': [1303, 1, 27],
@@ -11922,8 +11922,8 @@ export const eraInfo: Record<string, EraInfo> = {
   徳治: {
     reading: 'とくじ',
     yomi: 'Tokuji',
-    start: '嘉元4年12月14日',
-    end: '徳治3年10月9日',
+    start: [1307, 1, 26],
+    end: [1308, 11, 30],
     years: {
       '1': {
         '1': [1306, 2, 22],
@@ -11973,8 +11973,8 @@ export const eraInfo: Record<string, EraInfo> = {
   延慶: {
     reading: 'えんきょう',
     yomi: 'Enkyō',
-    start: '徳治3年10月9日',
-    end: '延慶4年4月28日',
+    start: [1308, 11, 30],
+    end: [1311, 5, 25],
     years: {
       '1': {
         '1': [1308, 2, 1],
@@ -12039,8 +12039,8 @@ export const eraInfo: Record<string, EraInfo> = {
   応長: {
     reading: 'おうちょう',
     yomi: 'Ōchō',
-    start: '延慶4年4月28日',
-    end: '応長2年3月20日',
+    start: [1311, 5, 25],
+    end: [1312, 5, 5],
     years: {
       '1': {
         '1': [1311, 1, 29],
@@ -12076,8 +12076,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正和: {
     reading: 'しょうわ',
     yomi: 'Shōwa',
-    start: '応長2年3月20日',
-    end: '正和6年2月3日',
+    start: [1312, 5, 5],
+    end: [1317, 3, 24],
     years: {
       '1': {
         '1': [1312, 2, 16],
@@ -12170,8 +12170,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文保: {
     reading: 'ぶんぽう',
     yomi: 'Bumpō',
-    start: '正和6年2月3日',
-    end: '文保3年4月28日',
+    start: [1317, 3, 24],
+    end: [1319, 5, 26],
     years: {
       '1': {
         '1': [1317, 2, 20],
@@ -12221,8 +12221,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元応: {
     reading: 'げんおう',
     yomi: "Gen'ō",
-    start: '文保3年4月28日',
-    end: '元応3年2月23日',
+    start: [1319, 5, 26],
+    end: [1321, 3, 30],
     years: {
       '1': {
         '1': [1319, 1, 30],
@@ -12272,8 +12272,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元亨: {
     reading: 'げんこう',
     yomi: 'Genkō',
-    start: '元応3年2月23日',
-    end: '元亨4年12月9日',
+    start: [1321, 3, 30],
+    end: [1325, 1, 2],
     years: {
       '1': {
         '1': [1321, 2, 6],
@@ -12337,8 +12337,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正中: {
     reading: 'しょうちゅ',
     yomi: 'Shōchu',
-    start: '元亨4年12月9日',
-    end: '正中3年4月26日',
+    start: [1325, 1, 2],
+    end: [1326, 6, 5],
     years: {
       '1': {
         '1': [1324, 2, 4],
@@ -12388,8 +12388,8 @@ export const eraInfo: Record<string, EraInfo> = {
   嘉暦: {
     reading: 'かりゃく',
     yomi: 'Karyaku',
-    start: '正中3年4月26日',
-    end: '嘉暦4年8月29日',
+    start: [1326, 6, 5],
+    end: [1329, 9, 30],
     years: {
       '1': {
         '1': [1326, 2, 12],
@@ -12453,8 +12453,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元徳: {
     reading: 'げんとく',
     yomi: 'Gentoku',
-    start: '嘉暦4年8月29日',
-    end: '元徳3年8月9日',
+    start: [1329, 9, 30],
+    end: [1331, 9, 19],
     years: {
       '1': {
         '1': [1329, 2, 8],
@@ -12518,8 +12518,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元弘: {
     reading: 'げんこう',
     yomi: 'Genkō (Southern)',
-    start: '元徳3年5月5日',
-    end: '元弘4年1月29日',
+    start: [1331, 6, 18],
+    end: [1334, 3, 13],
     years: {
       '1': {
         '1': [1331, 2, 16],
@@ -12583,8 +12583,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正慶: {
     reading: 'しょうけい',
     yomi: 'Shōkei',
-    start: '元徳3年8月9日',
-    end: '正慶2年5月22日',
+    start: [1331, 9, 19],
+    end: [1333, 7, 12],
     years: {
       '1': {
         '1': [1332, 2, 5],
@@ -12620,8 +12620,8 @@ export const eraInfo: Record<string, EraInfo> = {
   建武: {
     reading: 'けんむ',
     yomi: 'Kemmu (Southern)',
-    start: '正慶2年5月22日',
-    end: '建武5年8月28日',
+    start: [1333, 7, 12],
+    end: [1338, 10, 19],
     years: {
       '1': {
         '1': [1334, 2, 13],
@@ -12700,8 +12700,8 @@ export const eraInfo: Record<string, EraInfo> = {
   延元: {
     reading: 'えいげん',
     yomi: 'Eigen (Southern)',
-    start: '建武3年2月29日',
-    end: '延元5年4月28日',
+    start: [1336, 4, 19],
+    end: [1340, 6, 2],
     years: {
       '1': {
         '1': [1336, 2, 21],
@@ -12779,8 +12779,8 @@ export const eraInfo: Record<string, EraInfo> = {
   興国: {
     reading: 'こうこく',
     yomi: 'Kōkoku (Southern)',
-    start: '延元5年4月28日',
-    end: '興国7年12月8日',
+    start: [1340, 6, 2],
+    end: [1347, 1, 28],
     years: {
       '1': {
         '1': [1340, 2, 7],
@@ -12888,8 +12888,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正平: {
     reading: 'しょうへい',
     yomi: 'Shōhei (Southern)',
-    start: '興国7年12月8日',
-    end: '正平25年7月24日',
+    start: [1347, 1, 28],
+    end: [1370, 8, 24],
     years: {
       '1': {
         '1': [1346, 2, 1],
@@ -13255,8 +13255,8 @@ export const eraInfo: Record<string, EraInfo> = {
   暦応: {
     reading: 'りゃくおう',
     yomi: 'Ryakuō',
-    start: '建武5年8月28日',
-    end: '暦応5年4月27日',
+    start: [1338, 10, 19],
+    end: [1342, 6, 9],
     years: {
       '1': {
         '1': [1338, 1, 30],
@@ -13335,8 +13335,8 @@ export const eraInfo: Record<string, EraInfo> = {
   康永: {
     reading: 'こうえい',
     yomi: 'Kōei',
-    start: '暦応5年4月27日',
-    end: '康永4年10月21日',
+    start: [1342, 6, 9],
+    end: [1345, 11, 23],
     years: {
       '1': {
         '1': [1342, 2, 14],
@@ -13400,8 +13400,8 @@ export const eraInfo: Record<string, EraInfo> = {
   貞和: {
     reading: 'じょうわ',
     yomi: 'Jōwa',
-    start: '康永4年10月21日',
-    end: '貞和6年2月27日',
+    start: [1345, 11, 23],
+    end: [1350, 4, 12],
     years: {
       '1': {
         '1': [1345, 2, 11],
@@ -13494,8 +13494,8 @@ export const eraInfo: Record<string, EraInfo> = {
   観応: {
     reading: 'かんおう',
     yomi: "Kan'ō",
-    start: '貞和6年2月27日',
-    end: '観応3年9月27日',
+    start: [1350, 4, 12],
+    end: [1352, 11, 12],
     years: {
       '1': {
         '1': [1350, 2, 16],
@@ -13545,8 +13545,8 @@ export const eraInfo: Record<string, EraInfo> = {
   建徳: {
     reading: 'けんとく',
     yomi: 'Kentoku (Southern)',
-    start: '正平25年7月24日',
-    end: '建徳3年4月1日?',
+    start: [1370, 8, 24],
+    end: [1372, 5, 12],
     years: {
       '1': {
         '1': [1370, 2, 5],
@@ -13596,8 +13596,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文中: {
     reading: 'ぶんちゅう',
     yomi: 'Bunchū (Southern)',
-    start: '建徳3年4月',
-    end: '文中4年5月27日',
+    start: [1372, 5, 12],
+    end: [1375, 7, 4],
     years: {
       '1': {
         '1': [1372, 2, 14],
@@ -13661,8 +13661,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天授: {
     reading: 'てんじゅ',
     yomi: 'Tenju (Southern)',
-    start: '文中4年5月27日',
-    end: '天授7年2月10日',
+    start: [1375, 7, 4],
+    end: [1381, 3, 14],
     years: {
       '1': {
         '1': [1375, 2, 10],
@@ -13769,8 +13769,8 @@ export const eraInfo: Record<string, EraInfo> = {
   弘和: {
     reading: 'こうわ',
     yomi: 'Kōwa (Southern)',
-    start: '天授7年2月10日',
-    end: '弘和4年4月28日',
+    start: [1381, 3, 14],
+    end: [1384, 5, 26],
     years: {
       '1': {
         '1': [1381, 2, 3],
@@ -13835,8 +13835,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元中: {
     reading: 'げんちゅう',
     yomi: 'Genchū (Southern)',
-    start: '弘和4年4月28日',
-    end: '元中9年閏10月5日',
+    start: [1384, 5, 26],
+    end: [1392, 11, 27],
     years: {
       '1': {
         '1': [1384, 1, 31],
@@ -13973,8 +13973,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文和: {
     reading: 'ぶんな',
     yomi: 'Bunna',
-    start: '観応3年9月27日',
-    end: '文和5年3月28日',
+    start: [1352, 11, 12],
+    end: [1356, 5, 7],
     years: {
       '1': {
         '1': [1352, 1, 26],
@@ -14053,8 +14053,8 @@ export const eraInfo: Record<string, EraInfo> = {
   延文: {
     reading: 'えんぶん',
     yomi: 'Embun',
-    start: '文和5年3月28日',
-    end: '延文6年3月29日',
+    start: [1356, 5, 7],
+    end: [1361, 5, 12],
     years: {
       '1': {
         '1': [1356, 2, 10],
@@ -14147,8 +14147,8 @@ export const eraInfo: Record<string, EraInfo> = {
   康安: {
     reading: 'こうあん',
     yomi: 'Kōan',
-    start: '延文6年3月29日',
-    end: '康安2年9月23日',
+    start: [1361, 5, 12],
+    end: [1362, 10, 19],
     years: {
       '1': {
         '1': [1361, 2, 14],
@@ -14183,8 +14183,8 @@ export const eraInfo: Record<string, EraInfo> = {
   貞治: {
     reading: 'じょうじ',
     yomi: 'Jōji',
-    start: '康安2年9月23日',
-    end: '貞治7年2月18日',
+    start: [1362, 10, 19],
+    end: [1368, 3, 15],
     years: {
       '1': {
         '1': [1362, 2, 4],
@@ -14292,8 +14292,8 @@ export const eraInfo: Record<string, EraInfo> = {
   応安: {
     reading: 'おうあん',
     yomi: 'Ōan',
-    start: '貞治7年2月18日',
-    end: '応安8年2月27日',
+    start: [1368, 3, 15],
+    end: [1375, 4, 6],
     years: {
       '1': {
         '1': [1368, 1, 29],
@@ -14415,8 +14415,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永和: {
     reading: 'えいわ',
     yomi: 'Eiwa',
-    start: '応安8年2月27日',
-    end: '永和5年3月22日',
+    start: [1375, 4, 6],
+    end: [1379, 4, 17],
     years: {
       '1': {
         '1': [1375, 2, 10],
@@ -14495,8 +14495,8 @@ export const eraInfo: Record<string, EraInfo> = {
   康暦: {
     reading: 'こうりゃく',
     yomi: 'Kōryaku',
-    start: '永和5年3月22日',
-    end: '康暦3年2月24日',
+    start: [1379, 4, 17],
+    end: [1381, 3, 28],
     years: {
       '1': {
         '1': [1379, 1, 27],
@@ -14546,8 +14546,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永徳: {
     reading: 'えいとく',
     yomi: 'Eitoku',
-    start: '康暦3年2月24日',
-    end: '永徳4年2月27日',
+    start: [1381, 3, 28],
+    end: [1384, 3, 27],
     years: {
       '1': {
         '1': [1381, 2, 3],
@@ -14612,8 +14612,8 @@ export const eraInfo: Record<string, EraInfo> = {
   至徳: {
     reading: 'しとく',
     yomi: 'Shitoku',
-    start: '永徳4年2月27日',
-    end: '至徳4年8月23日',
+    start: [1384, 3, 27],
+    end: [1387, 10, 13],
     years: {
       '1': {
         '1': [1384, 1, 31],
@@ -14678,8 +14678,8 @@ export const eraInfo: Record<string, EraInfo> = {
   嘉慶: {
     reading: 'かけい',
     yomi: 'Kakei',
-    start: '至徳4年8月23日',
-    end: '嘉慶3年2月9日',
+    start: [1387, 10, 13],
+    end: [1389, 3, 15],
     years: {
       '1': {
         '1': [1387, 1, 29],
@@ -14729,8 +14729,8 @@ export const eraInfo: Record<string, EraInfo> = {
   康応: {
     reading: 'こうおう',
     yomi: 'Kōō',
-    start: '嘉慶3年2月9日',
-    end: '康応2年3月26日',
+    start: [1389, 3, 15],
+    end: [1390, 4, 20],
     years: {
       '1': {
         '1': [1389, 2, 5],
@@ -14766,8 +14766,8 @@ export const eraInfo: Record<string, EraInfo> = {
   明徳: {
     reading: 'めいとく',
     yomi: 'Meitoku',
-    start: '康応2年3月26日',
-    end: '明徳5年7月5日',
+    start: [1390, 4, 20],
+    end: [1394, 8, 10],
     years: {
       '1': {
         '1': [1390, 1, 25],
@@ -14846,8 +14846,8 @@ export const eraInfo: Record<string, EraInfo> = {
   応永: {
     reading: 'おうえい',
     yomi: 'Ōei',
-    start: '明徳5年7月5日',
-    end: '応永35年4月27日',
+    start: [1394, 8, 10],
+    end: [1428, 6, 19],
     years: {
       '1': {
         '1': [1394, 2, 9],
@@ -15357,8 +15357,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正長: {
     reading: 'しょうちょう',
     yomi: 'Shōchō',
-    start: '応永35年4月27日',
-    end: '正長2年9月5日',
+    start: [1428, 6, 19],
+    end: [1429, 10, 12],
     years: {
       '1': {
         '1': [1428, 1, 26],
@@ -15394,8 +15394,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永享: {
     reading: 'えいきょう',
     yomi: 'Eikyō',
-    start: '正長2年9月5日',
-    end: '永享13年2月17日',
+    start: [1429, 10, 12],
+    end: [1441, 3, 19],
     years: {
       '1': {
         '1': [1429, 2, 13],
@@ -15589,8 +15589,8 @@ export const eraInfo: Record<string, EraInfo> = {
   嘉吉: {
     reading: 'かきつ',
     yomi: 'Kakitsu',
-    start: '永享13年2月17日',
-    end: '嘉吉4年2月5日',
+    start: [1441, 3, 19],
+    end: [1444, 3, 3],
     years: {
       '1': {
         '1': [1441, 2, 1],
@@ -15655,8 +15655,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文安: {
     reading: 'ぶんあん',
     yomi: "Bun'an",
-    start: '嘉吉4年2月5日',
-    end: '文安6年7月28日',
+    start: [1444, 3, 3],
+    end: [1449, 8, 25],
     years: {
       '1': {
         '1': [1444, 1, 29],
@@ -15750,8 +15750,8 @@ export const eraInfo: Record<string, EraInfo> = {
   宝徳: {
     reading: 'ほうとく',
     yomi: 'Hōtoku',
-    start: '文安6年7月28日',
-    end: '宝徳4年7月25日',
+    start: [1449, 8, 25],
+    end: [1452, 8, 19],
     years: {
       '1': {
         '1': [1449, 2, 3],
@@ -15816,8 +15816,8 @@ export const eraInfo: Record<string, EraInfo> = {
   享徳: {
     reading: 'きょうとく',
     yomi: 'Kyōtoku',
-    start: '宝徳4年7月25日',
-    end: '享徳4年7月25日',
+    start: [1452, 8, 19],
+    end: [1455, 9, 15],
     years: {
       '1': {
         '1': [1452, 1, 31],
@@ -15882,8 +15882,8 @@ export const eraInfo: Record<string, EraInfo> = {
   康正: {
     reading: 'こうしょう',
     yomi: 'Kōshō',
-    start: '享徳4年7月25日',
-    end: '康正3年9月28日',
+    start: [1455, 9, 15],
+    end: [1457, 10, 25],
     years: {
       '1': {
         '1': [1455, 1, 27],
@@ -15933,8 +15933,8 @@ export const eraInfo: Record<string, EraInfo> = {
   長禄: {
     reading: 'ちょうろく',
     yomi: 'Chōroku',
-    start: '康正3年9月28日',
-    end: '長禄4年12月21日',
+    start: [1457, 10, 25],
+    end: [1461, 2, 10],
     years: {
       '1': {
         '1': [1457, 2, 4],
@@ -15999,8 +15999,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛正: {
     reading: 'かんしょう',
     yomi: 'Kanshō',
-    start: '長禄4年12月21日',
-    end: '寛正7年2月28日',
+    start: [1461, 2, 10],
+    end: [1466, 3, 23],
     years: {
       '1': {
         '1': [1460, 2, 2],
@@ -16108,8 +16108,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文正: {
     reading: 'ぶんしょう',
     yomi: 'Bunshō',
-    start: '寛正7年2月28日',
-    end: '文正2年3月5日',
+    start: [1466, 3, 23],
+    end: [1467, 4, 18],
     years: {
       '1': {
         '1': [1466, 1, 26],
@@ -16145,8 +16145,8 @@ export const eraInfo: Record<string, EraInfo> = {
   応仁: {
     reading: 'おうにん',
     yomi: 'Ōnin',
-    start: '文正2年3月5日',
-    end: '応仁3年4月28日',
+    start: [1467, 4, 18],
+    end: [1469, 6, 17],
     years: {
       '1': {
         '1': [1467, 2, 14],
@@ -16196,8 +16196,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文明: {
     reading: 'ぶんめい',
     yomi: 'Bummei',
-    start: '応仁3年4月28日',
-    end: '文明19年7月20日',
+    start: [1469, 6, 17],
+    end: [1487, 8, 18],
     years: {
       '1': {
         '1': [1469, 2, 21],
@@ -16477,8 +16477,8 @@ export const eraInfo: Record<string, EraInfo> = {
   長享: {
     reading: 'ちょうきょう',
     yomi: 'Chōkyō',
-    start: '文明19年7月20日',
-    end: '長享3年8月21日',
+    start: [1487, 8, 18],
+    end: [1489, 9, 25],
     years: {
       '1': {
         '1': [1487, 2, 3],
@@ -16528,8 +16528,8 @@ export const eraInfo: Record<string, EraInfo> = {
   延徳: {
     reading: 'えんとく',
     yomi: 'Entoku',
-    start: '長享3年8月21日',
-    end: '延徳4年7月19日',
+    start: [1489, 9, 25],
+    end: [1492, 8, 21],
     years: {
       '1': {
         '1': [1489, 2, 10],
@@ -16593,8 +16593,8 @@ export const eraInfo: Record<string, EraInfo> = {
   明応: {
     reading: 'めいおう',
     yomi: 'Meiō',
-    start: '延徳4年7月19日',
-    end: '明応10年2月29日',
+    start: [1492, 8, 21],
+    end: [1501, 3, 28],
     years: {
       '1': {
         '1': [1492, 2, 8],
@@ -16745,8 +16745,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文亀: {
     reading: 'ぶんき',
     yomi: 'Bunki',
-    start: '明応10年2月29日',
-    end: '文亀4年2月30日',
+    start: [1501, 3, 28],
+    end: [1504, 3, 26],
     years: {
       '1': {
         '1': [1501, 1, 29],
@@ -16811,8 +16811,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永正: {
     reading: 'えいしょう',
     yomi: 'Eishō',
-    start: '文亀4年2月30日',
-    end: '永正18年8月23日',
+    start: [1504, 3, 26],
+    end: [1521, 10, 3],
     years: {
       '1': {
         '1': [1504, 1, 28],
@@ -17078,8 +17078,8 @@ export const eraInfo: Record<string, EraInfo> = {
   大永: {
     reading: 'だいえい',
     yomi: 'Daiei',
-    start: '永正18年8月23日',
-    end: '大永8年8月20日',
+    start: [1521, 10, 3],
+    end: [1528, 9, 13],
     years: {
       '1': {
         '1': [1521, 2, 18],
@@ -17201,8 +17201,8 @@ export const eraInfo: Record<string, EraInfo> = {
   享禄: {
     reading: 'きょうろく',
     yomi: 'Kyōroku',
-    start: '大永8年8月20日',
-    end: '享禄5年7月29日',
+    start: [1528, 9, 13],
+    end: [1532, 9, 8],
     years: {
       '1': {
         '1': [1528, 2, 1],
@@ -17281,8 +17281,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天文: {
     reading: 'てんぶん',
     yomi: 'Tembun',
-    start: '享禄5年7月29日',
-    end: '天文24年10月23日',
+    start: [1532, 9, 8],
+    end: [1555, 11, 17],
     years: {
       '1': {
         '1': [1532, 2, 16],
@@ -17634,8 +17634,8 @@ export const eraInfo: Record<string, EraInfo> = {
   弘治: {
     reading: 'こうじ',
     yomi: 'Kōji',
-    start: '天文24年10月23日',
-    end: '弘治4年2月28日',
+    start: [1555, 11, 17],
+    end: [1558, 3, 28],
     years: {
       '1': {
         '1': [1555, 2, 2],
@@ -17700,8 +17700,8 @@ export const eraInfo: Record<string, EraInfo> = {
   永禄: {
     reading: 'えいろく',
     yomi: 'Eiroku',
-    start: '弘治4年2月28日',
-    end: '永禄13年4月23日',
+    start: [1558, 3, 28],
+    end: [1570, 6, 6],
     years: {
       '1': {
         '1': [1558, 1, 30],
@@ -17895,8 +17895,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元亀: {
     reading: 'げんき',
     yomi: 'Genki',
-    start: '永禄13年4月23日',
-    end: '元亀4年7月28日',
+    start: [1570, 6, 6],
+    end: [1573, 9, 4],
     years: {
       '1': {
         '1': [1570, 2, 15],
@@ -17960,8 +17960,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天正: {
     reading: 'てんしょう',
     yomi: 'Tenshō',
-    start: '元亀4年7月28日',
-    end: '天正20年12月8日',
+    start: [1573, 9, 4],
+    end: [1593, 1, 10],
     years: {
       '1': {
         '1': [1573, 2, 13],
@@ -18255,8 +18255,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文禄: {
     reading: 'ぶんろく',
     yomi: 'Bunroku',
-    start: '天正20年12月8日',
-    end: '文禄5年10月27日',
+    start: [1593, 1, 10],
+    end: [1596, 12, 16],
     years: {
       '1': {
         '1': [1592, 2, 13],
@@ -18335,8 +18335,8 @@ export const eraInfo: Record<string, EraInfo> = {
   慶長: {
     reading: 'けいちょう',
     yomi: 'Keichō',
-    start: '文禄5年10月27日',
-    end: '慶長20年7月13日',
+    start: [1596, 12, 16],
+    end: [1615, 9, 5],
     years: {
       '1': {
         '1': [1596, 1, 30],
@@ -18631,8 +18631,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元和: {
     reading: 'げんな',
     yomi: 'Genna',
-    start: '慶長20年7月13日',
-    end: '元和10年2月30日',
+    start: [1615, 9, 5],
+    end: [1624, 4, 17],
     years: {
       '1': {
         '1': [1615, 1, 29],
@@ -18783,8 +18783,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛永: {
     reading: 'かんえい',
     yomi: "Kan'ei",
-    start: '元和10年2月30日',
-    end: '朝廷から提示された8つの候補のうち、幕府が選んだ寛永・享明・貞正の3候補から、天皇の意向によって選ばれた[5]。',
+    start: [1624, 4, 17],
+    end: [1645, 1, 13],
     years: {
       '1': {
         '1': [1624, 2, 19],
@@ -19092,8 +19092,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正保: {
     reading: 'しょうほう',
     yomi: 'Shōhō',
-    start: '寛永21年12月16日',
-    end: '正保5年2月15日',
+    start: [1645, 1, 13],
+    end: [1648, 4, 7],
     years: {
       '1': {
         '1': [1644, 2, 8],
@@ -19172,8 +19172,8 @@ export const eraInfo: Record<string, EraInfo> = {
   慶安: {
     reading: 'けいあん',
     yomi: 'Keian',
-    start: '正保5年2月15日',
-    end: '慶安5年9月18日',
+    start: [1648, 4, 7],
+    end: [1652, 10, 20],
     years: {
       '1': {
         '1': [1648, 1, 25],
@@ -19252,8 +19252,8 @@ export const eraInfo: Record<string, EraInfo> = {
   承応: {
     reading: 'じょうおう',
     yomi: 'Jōō',
-    start: '慶安5年9月18日',
-    end: '承応・文嘉・享応・承禄・承延の候補の中から後光明天皇が承応・文嘉・享応を選び、幕府へ提示。幕府がその中から承応を選んだ。',
+    start: [1652, 10, 20],
+    end: [1655, 5, 18],
     years: {
       '1': {
         '1': [1652, 2, 10],
@@ -19317,8 +19317,8 @@ export const eraInfo: Record<string, EraInfo> = {
   明暦: {
     reading: 'めいれき',
     yomi: 'Meireki',
-    start: '承応4年4月13日',
-    end: '明暦4年7月23日',
+    start: [1655, 5, 18],
+    end: [1658, 8, 21],
     years: {
       '1': {
         '1': [1655, 2, 7],
@@ -19383,8 +19383,8 @@ export const eraInfo: Record<string, EraInfo> = {
   万治: {
     reading: 'まんじ',
     yomi: 'Manji',
-    start: '明暦4年7月23日',
-    end: '万治4年4月25日',
+    start: [1658, 8, 21],
+    end: [1661, 5, 23],
     years: {
       '1': {
         '1': [1658, 2, 3],
@@ -19449,8 +19449,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛文: {
     reading: 'かんぶん',
     yomi: 'Kambun',
-    start: '万治4年4月25日',
-    end: '寛文13年9月21日',
+    start: [1661, 5, 23],
+    end: [1673, 10, 30],
     years: {
       '1': {
         '1': [1661, 1, 31],
@@ -19644,8 +19644,8 @@ export const eraInfo: Record<string, EraInfo> = {
   延宝: {
     reading: 'えんぽう',
     yomi: 'Empō',
-    start: '寛文13年9月21日',
-    end: '延宝9年9月29日',
+    start: [1673, 10, 30],
+    end: [1681, 11, 9],
     years: {
       '1': {
         '1': [1673, 2, 17],
@@ -19781,8 +19781,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天和: {
     reading: 'てんな',
     yomi: 'Tenna',
-    start: '延宝9年9月29日',
-    end: '天和4年2月21日',
+    start: [1681, 11, 9],
+    end: [1684, 4, 5],
     years: {
       '1': {
         '1': [1681, 2, 19],
@@ -19846,8 +19846,8 @@ export const eraInfo: Record<string, EraInfo> = {
   貞享: {
     reading: 'じょうきょう',
     yomi: 'Jōkyō',
-    start: '天和4年2月21日',
-    end: '貞享5年9月30日',
+    start: [1684, 4, 5],
+    end: [1688, 10, 23],
     years: {
       '1': {
         '1': [1684, 2, 16],
@@ -19925,8 +19925,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元禄: {
     reading: 'げんろく',
     yomi: 'Genroku',
-    start: '貞享5年9月30日',
-    end: '元禄17年3月13日',
+    start: [1688, 10, 23],
+    end: [1704, 4, 16],
     years: {
       '1': {
         '1': [1688, 2, 2],
@@ -20177,8 +20177,8 @@ export const eraInfo: Record<string, EraInfo> = {
   宝永: {
     reading: 'ほうえい',
     yomi: 'Hōei',
-    start: '元禄17年3月13日',
-    end: '宝永8年4月25日',
+    start: [1704, 4, 16],
+    end: [1711, 6, 11],
     years: {
       '1': {
         '1': [1704, 2, 5],
@@ -20300,8 +20300,8 @@ export const eraInfo: Record<string, EraInfo> = {
   正徳: {
     reading: 'しょうとく',
     yomi: 'Shōtoku',
-    start: '宝永8年4月25日',
-    end: '正徳6年6月22日',
+    start: [1711, 6, 11],
+    end: [1716, 8, 9],
     years: {
       '1': {
         '1': [1711, 2, 17],
@@ -20394,8 +20394,8 @@ export const eraInfo: Record<string, EraInfo> = {
   享保: {
     reading: 'きょうほう',
     yomi: 'Kyōhō',
-    start: '正徳6年6月22日',
-    end: '享保21年4月28日',
+    start: [1716, 8, 9],
+    end: [1736, 6, 7],
     years: {
       '1': {
         '1': [1716, 1, 25],
@@ -20704,8 +20704,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元文: {
     reading: 'げんぶん',
     yomi: 'Gembun',
-    start: '享保21年4月28日',
-    end: '元文6年2月27日',
+    start: [1736, 6, 7],
+    end: [1741, 4, 12],
     years: {
       '1': {
         '1': [1736, 2, 12],
@@ -20798,8 +20798,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛保: {
     reading: 'かんぽう',
     yomi: 'Kampō',
-    start: '元文6年2月27日',
-    end: '寛保4年2月21日',
+    start: [1741, 4, 12],
+    end: [1744, 4, 3],
     years: {
       '1': {
         '1': [1741, 2, 16],
@@ -20863,8 +20863,8 @@ export const eraInfo: Record<string, EraInfo> = {
   延享: {
     reading: 'えんきょう',
     yomi: 'Enkyō',
-    start: '寛保4年2月21日',
-    end: '延享5年7月12日',
+    start: [1744, 4, 3],
+    end: [1748, 8, 5],
     years: {
       '1': {
         '1': [1744, 2, 14],
@@ -20943,8 +20943,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛延: {
     reading: 'かんえん',
     yomi: "Kan'en",
-    start: '延享5年7月12日',
-    end: '寛延4年10月27日',
+    start: [1748, 8, 5],
+    end: [1751, 12, 14],
     years: {
       '1': {
         '1': [1748, 1, 30],
@@ -21009,8 +21009,8 @@ export const eraInfo: Record<string, EraInfo> = {
   宝暦: {
     reading: 'ほうれき',
     yomi: 'Hōreki',
-    start: '寛延4年10月27日',
-    end: '宝暦14年6月2日',
+    start: [1751, 12, 14],
+    end: [1764, 6, 30],
     years: {
       '1': {
         '1': [1751, 1, 27],
@@ -21219,8 +21219,8 @@ export const eraInfo: Record<string, EraInfo> = {
   明和: {
     reading: 'めいわ',
     yomi: 'Meiwa',
-    start: '宝暦14年6月2日',
-    end: '明和9年11月16日',
+    start: [1764, 6, 30],
+    end: [1772, 12, 10],
     years: {
       '1': {
         '1': [1764, 2, 2],
@@ -21356,8 +21356,8 @@ export const eraInfo: Record<string, EraInfo> = {
   安永: {
     reading: 'あんえい',
     yomi: "An'ei",
-    start: '明和9年11月16日',
-    end: '安永10年4月2日',
+    start: [1772, 12, 10],
+    end: [1781, 4, 25],
     years: {
       '1': {
         '1': [1772, 2, 4],
@@ -21508,8 +21508,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天明: {
     reading: 'てんめい',
     yomi: 'Temmei',
-    start: '安永10年4月2日',
-    end: '天明9年1月25日',
+    start: [1781, 4, 25],
+    end: [1789, 2, 19],
     years: {
       '1': {
         '1': [1781, 1, 24],
@@ -21646,8 +21646,8 @@ export const eraInfo: Record<string, EraInfo> = {
   寛政: {
     reading: 'かんせい',
     yomi: 'Kansei',
-    start: '天明9年1月25日',
-    end: '寛政13年2月5日',
+    start: [1789, 2, 19],
+    end: [1801, 3, 19],
     years: {
       '1': {
         '1': [1789, 1, 26],
@@ -21841,8 +21841,8 @@ export const eraInfo: Record<string, EraInfo> = {
   享和: {
     reading: 'きょうわ',
     yomi: 'Kyōwa',
-    start: '寛政13年2月5日',
-    end: '享和4年2月11日',
+    start: [1801, 3, 19],
+    end: [1804, 3, 22],
     years: {
       '1': {
         '1': [1801, 2, 13],
@@ -21906,8 +21906,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文化: {
     reading: 'ぶんか',
     yomi: 'Bunka',
-    start: '享和4年2月11日',
-    end: '文化15年4月22日',
+    start: [1804, 3, 22],
+    end: [1818, 5, 26],
     years: {
       '1': {
         '1': [1804, 2, 11],
@@ -22129,8 +22129,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文政: {
     reading: 'ぶんせい',
     yomi: 'Bunsei',
-    start: '文化15年4月22日',
-    end: '文政13年12月10日',
+    start: [1818, 5, 26],
+    end: [1831, 1, 23],
     years: {
       '1': {
         '1': [1818, 2, 5],
@@ -22324,8 +22324,8 @@ export const eraInfo: Record<string, EraInfo> = {
   天保: {
     reading: 'てんぽう',
     yomi: 'Tempō',
-    start: '文政13年12月10日',
-    end: '天保15年12月2日',
+    start: [1831, 1, 23],
+    end: [1845, 1, 9],
     years: {
       '1': {
         '1': [1830, 1, 25],
@@ -22548,8 +22548,8 @@ export const eraInfo: Record<string, EraInfo> = {
   弘化: {
     reading: 'こうか',
     yomi: 'Kōka',
-    start: '天保15年12月2日',
-    end: '弘化5年2月28日',
+    start: [1845, 1, 9],
+    end: [1848, 4, 1],
     years: {
       '1': {
         '1': [1844, 2, 18],
@@ -22627,8 +22627,8 @@ export const eraInfo: Record<string, EraInfo> = {
   嘉永: {
     reading: 'かえい',
     yomi: 'Kaei',
-    start: '弘化5年2月28日',
-    end: '嘉永7年11月27日',
+    start: [1848, 4, 1],
+    end: [1855, 1, 15],
     years: {
       '1': {
         '1': [1848, 2, 5],
@@ -22736,8 +22736,8 @@ export const eraInfo: Record<string, EraInfo> = {
   安政: {
     reading: 'あんせい',
     yomi: 'Ansei',
-    start: '嘉永7年11月27日',
-    end: '安政7年3月18日',
+    start: [1855, 1, 15],
+    end: [1860, 4, 8],
     years: {
       '1': {
         '1': [1854, 1, 29],
@@ -22845,8 +22845,8 @@ export const eraInfo: Record<string, EraInfo> = {
   万延: {
     reading: 'まんえい',
     yomi: "Man'ei",
-    start: '安政7年3月18日',
-    end: '万延2年2月19日',
+    start: [1860, 4, 8],
+    end: [1861, 3, 29],
     years: {
       '1': {
         '1': [1860, 1, 23],
@@ -22882,8 +22882,8 @@ export const eraInfo: Record<string, EraInfo> = {
   文久: {
     reading: 'ぶんきゅう',
     yomi: 'Bunkyū',
-    start: '万延2年2月19日',
-    end: '文久4年2月20日',
+    start: [1861, 3, 29],
+    end: [1864, 3, 27],
     years: {
       '1': {
         '1': [1861, 2, 10],
@@ -22947,8 +22947,8 @@ export const eraInfo: Record<string, EraInfo> = {
   元治: {
     reading: 'げんじ',
     yomi: 'Genji',
-    start: '文久4年2月20日：',
-    end: '元治2年4月7日',
+    start: [1864, 3, 27],
+    end: [1865, 5, 1],
     years: {
       '1': {
         '1': [1864, 2, 8],
@@ -22984,8 +22984,8 @@ export const eraInfo: Record<string, EraInfo> = {
   慶応: {
     reading: 'けいおう',
     yomi: 'Keiō',
-    start: '元治2年4月7日',
-    end: '慶応4年9月8日',
+    start: [1865, 5, 1],
+    end: [1868, 10, 23],
     years: {
       '1': {
         '4': [1865, 5, 1],
@@ -23044,8 +23044,8 @@ export const eraInfo: Record<string, EraInfo> = {
   明治: {
     reading: 'めいじ',
     yomi: 'Meiji',
-    start: '慶応4年9月8日',
-    end: '明治5年12月2日',
+    start: [1868, 10, 23],
+    end: [1872, 12, 31],
     years: {
       '1': {
         '9': [1868, 10, 23],
