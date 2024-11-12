@@ -3,6 +3,10 @@
 
 export type DateArray = [year: number, month: number, day: number];
 
+// Negative numbers represent intercalary months and follow after the
+// corresponding positive month. For example, if an intercalary month was added
+// after April, it is represented by -4.
+// The sequence of months would then be: ..., 3, 4, -4, 5, 6, ...
 type Months = Record<number, DateArray>;
 
 type EraInfo = {
