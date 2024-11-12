@@ -1,7 +1,7 @@
 // This file was generated using the Japanese Era Date Conversion Tool.
 // https://github.com/enellis/japanese-era-date-conversion
 
-type DateArray = [year: number, month: number, day: number];
+export type DateArray = [year: number, month: number, day: number];
 
 type Months = Record<number, DateArray>;
 
