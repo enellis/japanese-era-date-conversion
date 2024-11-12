@@ -12454,7 +12454,7 @@ export const eraInfo: Record<string, EraInfo> = {
     reading: 'げんとく',
     yomi: 'Gentoku',
     start: [1329, 9, 30],
-    end: [1331, 9, 19],
+    end: [1332, 5, 31],
     years: {
       '1': {
         '1': [1329, 2, 8],

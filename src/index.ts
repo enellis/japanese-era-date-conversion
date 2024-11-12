@@ -86,6 +86,7 @@ async function getDataForEra(era: string): Promise<EraInfo> {
   const specialEraDates: Record<string, { start: string; end: string }> = {
     大宝: { start: '大宝1年3月21日', end: '大宝4年5月10日' },
     //
+    元徳: { start: '嘉暦4年8月29日', end: '元徳4年4月28日' },
     元弘: { start: '元徳3年5月5日', end: '元弘4年1月29日' },
     正慶: { start: '元徳3年8月9日', end: '正慶2年5月22日' },
     建武: { start: '正慶2年5月22日', end: '建武5年8月28日' },
