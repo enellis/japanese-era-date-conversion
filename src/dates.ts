@@ -1,7 +1,6 @@
-import { DateArray } from '.';
-
-import { eraInfo } from './era-info';
-import { parseNumber } from './numbers';
+import { eraInfo } from './era-info.js';
+import { DateArray } from './index.js';
+import { parseNumber } from './numbers.js';
 
 function isEraName(text: string): boolean {
   return text in eraInfo;

@@ -1,12 +1,12 @@
-import fs from 'fs-extra';
+import fs from 'fs';
 import fetch from 'node-fetch';
 import { parse } from 'node-html-parser';
 
-import { eraDateStringToGregorianDateArray } from './dates';
-import { eraInfo } from './era-info';
-import { gengous } from './gengous';
-import { parseNumber } from './numbers';
-import { yearMap } from './year-map';
+import { eraDateStringToGregorianDateArray } from './dates.js';
+import { eraInfo } from './era-info.js';
+import { gengous } from './gengous.js';
+import { parseNumber } from './numbers.js';
+import { yearMap } from './year-map.js';
 
 const OUTPUT_DIR = 'output/';
 
@@ -81,7 +81,7 @@ async function getDataForEra(era: string): Promise<EraInfo> {
   newEraInfo.reading = reading;
   newEraInfo.yomi = yomi;
 
-  const body = await fs.readFile('sites/' + era + '.html');
+  const body = fs.readFileSync('sites/' + era + '.html');
 
   const doc = parse('' + body);
 
